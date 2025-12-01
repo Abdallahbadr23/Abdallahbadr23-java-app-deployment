@@ -45,7 +45,7 @@ pipeline {
         }
        stage('deploy application') {
             steps {
-                sh "docker run -d -p 8090:8090 --name java-app  abdallah279/java-app:v$BUILD_NUMBER  "
+                sh "docker run -d -p 8090:8090 --name java-app-$BUILD_NUMBER  abdallah279/java-app:v$BUILD_NUMBER  "
             }
         } 
     }
